@@ -103,15 +103,12 @@ if(isset($_GET['send_email'])){
   $mail->SMTPAuth=true;
   $mail->SMTPSecure='tls';
 
-  // h-hotel account
   $mail->Username='suipservices@gmail.com';
   $mail->Password='qxxsxcxtrnjggwvg';
 
-  // send by h-hotel email
   $mail->setFrom('suipservices@gmail.com', 'Verify Email');
   // get email from input
   $mail->addAddress($c_email);
-  //$mail->addReplyTo('lamkaizhe16@gmail.com');
 
   // HTML body
   $mail->isHTML(true);

@@ -71,7 +71,7 @@ $contact_email = $row_conatct_us['contact_email'];
 
 <label>Email</label>
 
-<input type="text" class="form-control" name="email" required>
+<input type="email" class="form-control" name="email" required>
 
 </div><!-- form-group Ends -->
 
@@ -140,49 +140,67 @@ if(isset($_POST['submit'])){
 
 // Admin receives email through this code
 
-$sender_name = $_POST['name'];
+$sender_name = trim($_POST['name']);
 
-$sender_email = $_POST['email'];
+$sender_email = trim($_POST['email']);
 
-$sender_subject = $_POST['subject'];
+$sender_subject = trim($_POST['subject']);
 
-$sender_message = $_POST['message'];
+$sender_message = trim($_POST['message']);
 
-$enquiry_type = $_POST['enquiry_type'];
+$enquiry_type = trim($_POST['enquiry_type']);
 
-$new_message = "
+$insert_query = "insert into contact_messages (sender_name,message_from,message_subject,message_content,message_type) values ('$sender_name','$sender_email','$sender_subject','$sender_message','$enquiry_type')";
 
-<h1> This Message Has Been Sent By $sender_name </h1>
+if(mysqli_query($con, $insert_query)){
+  // Send email to sender through this code
 
-<p> <b> Sender Email :  </b> <br> $sender_email </p>
+require "Mail/phpmailer/PHPMailerAutoload.php";
+$mail = new PHPMailer;
 
-<p> <b> Sender Subject :  </b> <br> $sender_subject </p>
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'tls';
 
-<p> <b> Sender Enquiry Type :  </b> <br> $enquiry_type </p>
+$mail->Username = 'suipservices@gmail.com';
+$mail->Password = 'qxxsxcxtrnjggwvg';
 
-<p> <b> Sender Message :  </b> <br> $sender_message </p>
+$mail->setFrom('suipservices@gmail.com', 'Verify Email');
+// get email from input
+$mail->addAddress($sender_email);
 
-";
 
-$headers = "From: $sender_email \r\n";
+// HTML body
+$mail->isHTML(true);
+$mail->Subject = "Welcome to Businessconnect";
+$mail->Body = "
 
-$headers .= "Content-type: text/html\r\n";
+<h2>We shall get you soon, thanks for contacting us<h2>";
 
-mail($contact_email,$sender_subject,$new_message,$headers);
+if (!$mail->send()) {
+?>
+  <script>
+    alert("<?php echo " Invalid Email " ?>");
+  </script>
+<?php
+} else {
+?>
+  <script>
+    alert("<?php echo "Your message has been sent successfully" ?>");
+  </script>
+<?php
+}
+}
+else{
+  ?>
+  <script>
+    alert("<?php echo "Error!! Try again later" ?>");
+  </script>
+<?php
+}
 
-// Send email to sender through this code
-
-$email = $_POST['email'];
-
-$subject = "Welcome to my website";
-
-$msg = "I shall get you soon, thanks for sending us email";
-
-$from = "sad.ahmed22224@gmail.com";
-
-mail($email,$subject,$msg,$from);
-
-echo "<h2 align='center'>Your message has been sent successfully</h2>";
 
 }
 
