@@ -1,33 +1,79 @@
-<div class="main-box">
-        <div class="wrapper_C">
-            <div class="heading">
-                <h2>Log IN</h2>
-            </div>
+<div class="box" ><!-- box Starts -->
 
-            <form action="checkout.php" method ="post">
+<div class="box-header" ><!-- box-header Starts -->
 
-                <div class="input-box">
-                    <input type="email" name="c_email" placeholder="Enter your email" value="<?php echo isset($_POST['email'])? trim($_POST['email']):'';?>" required>
-                </div>
+<center>
+
+<h1>Login</h1>
+
+<p class="lead" >Already have an accoubn</p>
 
 
-                <div class="input-box">
-                    <input type="password" name="c_pass" placeholder="Create password" required>
-                </div>
+</center>
 
-                <div class="input-box button" id="loginbtn">
-                    <input type="Submit" name="login" value="Sign In">
-                </div>
-                <div class="text">
-                    <h3> <a href="./forgot_pass.php">Forgot password?</a></h3>
-                </div>
-                <div class="text">
-                    <h3> <a href="./wholesaler/wholesaler_login.php">Click here for wholesaler login</a></h3>
-                </div>
-            </form>
-        </div>
 
-    </div>
+
+
+
+</div><!-- box-header Ends -->
+
+<form action="checkout.php" method="post" ><!--form Starts -->
+
+<div class="form-group" ><!-- form-group Starts -->
+
+<label>Email</label>
+
+<input type="text" class="form-control" name="c_email" required >
+
+</div><!-- form-group Ends -->
+
+<div class="form-group" ><!-- form-group Starts -->
+
+<label>Password</label>
+
+<input type="password" class="form-control" name="c_pass" required >
+
+<h4 align="center">
+
+<a href="forgot_pass.php"> Forgot Password </a>
+
+</h4>
+
+</div><!-- form-group Ends -->
+
+<div class="text-center" ><!-- text-center Starts -->
+
+<button name="login" value="Login" class="btn btn-primary" >
+
+<i class="fa fa-sign-in" ></i> Log in
+
+
+</button>
+
+</div><!-- text-center Ends -->
+
+
+</form><!--form Ends -->
+
+<center><!-- center Starts -->
+
+<a href="customer_register.php" >
+
+<h3>Don't have an account? Register Here</h3>
+
+</a>
+
+<a href="wholesaler/wholesaler_login.php" >
+
+<h4>Are you a wholesaler? Login here</h4>
+
+</a>
+
+
+</center><!-- center Ends -->
+
+
+</div><!-- box Ends -->
 
 <?php
 

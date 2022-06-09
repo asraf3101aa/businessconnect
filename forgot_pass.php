@@ -32,10 +32,10 @@ include("includes/main.php");
         <!-- breadcrumb Starts -->
 
         <li>
-          <a href="index.php">Home</a>
+          <a href="checkout.php">Login</a>
         </li>
 
-        <li>Register</li>
+        <li>Forgot password</li>
 
       </ul><!-- breadcrumb Ends -->
 

@@ -7,9 +7,8 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="shortcut icon" href="./images/LOGO.png"image/png">
+<link rel="shortcut icon" href="./images/logo.png" type="image/png">
   <title>BUSINESS CONNECT</title>
-    <link rel="stylesheet" href="./customer/styles/customer_login_checkout.css">
   <link href="./styles/bootstrap.min.css" rel="stylesheet">
   <link href="./styles/backend.css" rel="stylesheet">
   <link href="./styles/style.css" rel="stylesheet">

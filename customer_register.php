@@ -3,79 +3,137 @@
 session_start();
 
 
-include("includes/db.php");
-include("functions/functions.php");
-include("includes/link.php");
 
-//include("includes/db.php");
-//include("includes/header.php");
-//include("functions/functions.php");
-//include("includes/main.php");
+include("includes/db.php");
+include("includes/header.php");
+include("functions/functions.php");
+include("includes/main.php");
 
 
 
 ?>
 
 
+<!-- MAIN -->
 <main>
-  <div class="logo_con">
-
-    <img src="images/LOGO.png" class="logo" alt="BC">
-  </div>
-  <div class="heading">
-    <h2>Registration</h2>
-  </div>
-
-  <div class="main-box">
-
-    <div class="wrapper_N">
-      <!--      <div class="textanimate">-->
-      <!--          <h1>-->
-      <!--              <a href="" class="typewrite" data-period="2000" data-type='[ "REGESTRATION" ]'>-->
-      <!--                  <span class="wrap"></span>-->
-      <!--              </a>-->
-      <!--          </h1>-->
-      <!--      </div>-->
-
-
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="input-box">
-          <input type="text" name="c_name" placeholder="Enter your name" value="<?php echo isset($_POST['name']) ? trim($_POST['name']) : ''; ?>">
-        </div>
-        <div class="input-box">
-          <input type="email" name="c_email" placeholder="Enter your email" value="<?php echo isset($_POST['email']) ? trim($_POST['email']) : ''; ?>">
-        </div>
-        <div class="input-box">
-          <input type="text" name="c_contact" placeholder="Enter your phone" name="phone" value="<?php echo isset($_POST['phone']) ? trim($_POST['phone']) : ''; ?>">
-        </div>
-        <div class="input-box-dropdown">
-          <select name="role" id="role">
-            <!--          <option value="">--Select User Type--</option>-->
-            <option value="ROLE_RETAILER">Retailer</option>
-            <option value="ROLE_WHOLESALER">Wholesaler</option>
-            <!-- <option value="admin">Admin</option> -->
-          </select>
-        </div>
-        <div class="input-box">
-          <input type="password" name="c_pass" placeholder="Create password">
-        </div>
-        <div class="input-box">
-          <input type="password" name="c_cnfrm_password" placeholder="Confirm password">
-        </div>
-        <div class="policy">
-          <input type="checkbox" required>
-          <h3>I accept all terms & condition</h3>
-        </div>
-        <div class="input-box button">
-          <input type="Submit" name="register" value="Register Now">
-        </div>
-        <div class="text">
-          <h3>Already have an account? <a href="checkout.php">Login now</a></h3>
-        </div>
-      </form>
+    <!-- HERO -->
+    <div class="nero">
+      <div class="nero__heading">
+        <span class="nero__bold">Connect</span> wiuth us
+      </div>
+      <p class="nero__text">
+      </p>
     </div>
-  </div>
-</main>
+  </main>
+
+
+<div id="content" ><!-- content Starts -->
+<div class="container" ><!-- container Starts -->
+
+
+
+
+
+<div class="col-md-12" ><!-- col-md-12 Starts -->
+
+<div class="box" ><!-- box Starts -->
+
+<div class="box-header" ><!-- box-header Starts -->
+
+<center><!-- center Starts -->
+
+<h2> Register A New Account </h2>
+
+
+
+</center><!-- center Ends -->
+
+</div><!-- box-header Ends -->
+
+<form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
+
+<div class="form-group" ><!-- form-group Starts -->
+
+<label>Your Name</label>
+
+<input type="text" class="form-control" name="c_name" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label>Your Email</label>
+
+<input type="text" class="form-control" name="c_email" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label>Your Phone</label>
+
+<input type="text" class="form-control" name="c_contact" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label>Register as</label>
+
+<select class="form-control" name="role" required>
+  <option value="ROLE_RETAILER">Retailer</option>
+  <option value="ROLE_WHOLESALER">Wholesaler</option>
+</select>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label>Your Password </label>
+
+<input type="password" class="form-control" id="pass" name="c_pass" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label>Confirm Password </label>
+
+<input type="password" class="form-control confirm" id="con_pass" required>
+
+</div><!-- form-group Ends -->
+
+
+
+
+
+
+<div class="text-center"><!-- text-center Starts -->
+
+<button type="submit" name="register" class="btn btn-primary">
+
+<i class="fa fa-user-md"></i> Register
+
+</button>
+
+<a href="checkout.php" >
+
+<h4>Already have an account? Login here</h4>
+
+</a>
+
+</div><!-- text-center Ends -->
+
+</form><!-- form Ends -->
+
+</div><!-- box Ends -->
+
+</div><!-- col-md-12 Ends -->
+
+
+
+</div><!-- container Ends -->
+</div><!-- content Ends -->
 
 </body>
 
@@ -87,7 +145,7 @@ $name_regex = $phone_regex = $password_regex = "";
 $password = "";
 $c_email = $c_contact = $c_name = $c_pass = "";
 $name_regex = "/^[a-zA-Z]{3,20}(?: [a-zA-Z]+){0,2}$/";
-$phone_regex = "/^(?=.*)((?:\+61) ?(?:\((?=.*\)))?([2-47-8])\)?|(?:\((?=.*\)))?([0-1][2-47-8])\)?) ?-?(?=.*)((\d{1} ?-?\d{3}$)|(00 ?-?\d{4} ?-?\d{4}$)|( ?-?\d{4} ?-?\d{4}$)|(\d{2} ?-?\d{3} ?-?\d{3}$))/";
+$phone_regex = "/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/";
 $password_regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/";
 
 if (isset($_POST['register'])) {

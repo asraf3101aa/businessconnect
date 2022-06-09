@@ -66,7 +66,7 @@ if(!isset($_SESSION['customer_email'])){
 
         <div class="logo">
           <a class="logo__link" href="index.php">
-            <img class="logo__img" src="images/logo.png" alt="Avenue fashion logotype" width="237" height="19">
+            <img class="logo__img" src="images/logo.png" alt="businessconnect logotype" width="237" height="19">
           </a>
         </div>
 
@@ -88,7 +88,7 @@ if(!isset($_SESSION['customer_email'])){
             </li>
 
             <li class="categories__item">
-              <a class="categories__link categories__link--active" href="./shop.php">
+              <a class="categories__link" href="./shop.php">
                 Shop
               </a>
             </li>

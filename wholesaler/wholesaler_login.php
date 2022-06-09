@@ -5,9 +5,6 @@ include("functions/functions.php");
 include("includes/header.php");
 
 ?>
-    <div class="logo_con">
-        <img src="images/LOGO.png" class="logo" alt="BC">
-    </div>
     <div class="main-box">
 
     <div class="wrapper_W">
@@ -30,19 +27,25 @@ include("includes/header.php");
                 <input type="Submit" name="login" value="Sign In">
             </div>
             <div class="text">
-                <h3> <a href="../forgot_pass.php">Forgot password?</a></h3>
+                <h3> <a href="forgot_pass.php">Forgot password? click here</a></h3>
             </div>
 
             <div class="text" id="spaceing">
-                <h3> <a href="../checkout.php">Click here for customer login</a></h3>
+                <h3> <a href="../checkout.php">Are you a retailer? Login here</a></h3>
+            </div>
+            <div class="text" id="spaceing">
+                <h3> <a href="../checkout.php">Don't have an account? Register here</a></h3>
             </div>
         </form>
     </div>
 
     </div>
+    
 <?php
-    include ("../includes/footer.php") ?>
-
+    include ("includes/footer.php") 
+    ?>
+    </body>
+    </html>
 
 <?php
 

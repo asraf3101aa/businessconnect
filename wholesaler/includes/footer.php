@@ -89,31 +89,6 @@
         </div>
     </div>
 
-    <div class="banners">
-        <div class="container clearfix">
-
-            <div class="banner-award">
-                <span>E-Commerce</span><br> New Platform
-            </div>
-
-            <div class="banner-social">
-                <a href="#" class="banner-social__link">
-                    <i class="icon-facebook"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-twitter"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-instagram"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-pinterest-circled"></i>
-                </a>
-            </div>
-
-        </div>
-    </div>
-
     <div class="page-footer__subline">
         <div class="container clearfix">
 
