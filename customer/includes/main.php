@@ -85,19 +85,6 @@ if(!isset($_SESSION['customer_email']) && !isset($_SESSION['wholesaler_email']))
         <nav class="main-nav">
           <ul class="categories">
 
-            <li class="categories__item">
-              <a class="categories__link" >
-                Top manufacturers
-               
-              </a>
-              </li>
-
-            <li class="categories__item">
-              <a class="categories__link" >
-                Best Sellers
-               
-              </a>
-            </li>
 
             <li class="categories__item">
               <a class="categories__link categories__link--active" href="shop.php">
@@ -106,8 +93,8 @@ if(!isset($_SESSION['customer_email']) && !isset($_SESSION['wholesaler_email']))
             </li>
 
             <li class="categories__item">
-              <a class="categories__link" >
-                Local Stores
+              <a class="categories__link" href="./contact.php">
+                Contact
               </a>
             </li>
 

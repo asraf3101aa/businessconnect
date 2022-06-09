@@ -74,28 +74,14 @@ if(!isset($_SESSION['customer_email'])){
           <ul class="categories">
 
             <li class="categories__item">
-              <a class="categories__link" >
-                Top Manufacturers
-               
-              </a>
-              </li>
-
-            <li class="categories__item">
-              <a class="categories__link">
-                Best Sellers
-               
-              </a>
-            </li>
-
-            <li class="categories__item">
               <a class="categories__link" href="./shop.php">
                 Shop
               </a>
             </li>
 
             <li class="categories__item">
-              <a class="categories__link" >
-                Local Stores
+              <a class="categories__link" href="./contact.php">
+                Contact
               </a>
             </li>
 
