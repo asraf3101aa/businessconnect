@@ -97,9 +97,9 @@ $contact_email = $row_conatct_us['contact_email'];
 <label> Select Enquiry Type </label>
 
 
-<select name="enquiry_type" class="form-control"><!-- select Starts -->
+<select name="enquiry_type" class="form-control" required><!-- select Starts -->
 
-<option> Select Enquiry Type </option>
+<option value=""> Select Enquiry Type </option>
 
 <?php
 
