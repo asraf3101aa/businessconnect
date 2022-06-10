@@ -150,7 +150,7 @@ $sender_message = trim($_POST['message']);
 
 $enquiry_type = trim($_POST['enquiry_type']);
 
-$insert_query = "insert into contact_messages (sender_name,message_from,message_subject,message_content,message_type) values ('$sender_name','$sender_email','$sender_subject','$sender_message','$enquiry_type')";
+$insert_query = "insert into contact_messages (sender_name,message_from,message_subject,message_content,enquiry_type) values ('$sender_name','$sender_email','$sender_subject','$sender_message','$enquiry_type')";
 
 if(mysqli_query($con, $insert_query)){
   // Send email to sender through this code

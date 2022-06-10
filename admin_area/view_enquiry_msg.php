@@ -118,30 +118,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         <td> <?php echo $message_subject; ?> </td>
 
-                                        <td> <?php echo $message; ?> </td>
-
-                                        
-
-
-                                        <td>
-
-                                            <a href="index.php?delete_p_cat=<?php echo $p_cat_id; ?>">
-
-                                                <i class="fa fa-trash-o"></i> Delete
-
-                                            </a>
-
-                                        </td>
-
-                                        <td>
-
-                                            <a href="index.php?edit_p_cat=<?php echo $p_cat_id; ?>">
-
-                                                <i class="fa fa-pencil"></i> Edit
-
-                                            </a>
-
-                                        </td>
+                                        <td> <?php echo $message; ?> </td>                                        
 
 
                                     </tr>
