@@ -47,7 +47,7 @@ if(!isset($_SESSION['customer_email'])){
 <li class="login__item">
 <?php
 if(!isset($_SESSION['customer_email'])){
-  echo '<a href="checkout.php" class="login__link">Sign In</a>';
+  echo '<a href="../checkout.php" class="login__link">Sign In</a>';
 } 
   else
   { 
@@ -74,19 +74,19 @@ if(!isset($_SESSION['customer_email'])){
           <ul class="categories">
 
             <li class="categories__item">
-              <a class="categories__link" href="./shop.php">
+              <a class="categories__link" href="../shop.php">
                 Shop
               </a>
             </li>
 
             <li class="categories__item">
-              <a class="categories__link" href="./contact.php">
+              <a class="categories__link" href="../contact.php">
                 Contact
               </a>
             </li>
 
           <li class="categories__item">
-              <a class="categories__link" href="my_account.php?my_orders">
+              <a class="categories__link" href="./my_account.php?my_orders">
                 My Account
                 <i class="icon-down-open-1"></i>
               </a>
@@ -96,13 +96,13 @@ if(!isset($_SESSION['customer_email'])){
                     <div class="dropdown__heading">Account Settings</div>
                     <ul class="dropdown__items">
                       <li class="dropdown__item">
-                        <a href="my_account.php?my_wishlist" class="dropdown__link">My Wishlist</a>
+                        <a href="./view_products.php" class="dropdown__link">View Products</a>
                       </li>
                       <li class="dropdown__item">
-                        <a href="my_account.php?my_orders" class="dropdown__link">My Orders</a>
+                        <a href="./my_account.php?my_orders" class="dropdown__link">My Orders</a>
                       </li>
                       <li class="dropdown__item">
-                        <a href="cart.php" class="dropdown__link">View Shopping Cart</a>
+                        <a href="../cart.php" class="dropdown__link">View Shopping Cart</a>
                       </li>
                     </ul>
                   </div>
@@ -110,13 +110,13 @@ if(!isset($_SESSION['customer_email'])){
                     <div class="dropdown__heading"></div>
                     <ul class="dropdown__items">
                       <li class="dropdown__item">
-                        <a href="my_account.php?edit_account" class="dropdown__link">Edit Your Account</a>
+                        <a href="./my_account.php?edit_account" class="dropdown__link">Edit Your Account</a>
                       </li>
                       <li class="dropdown__item">
-                        <a href="my_account.php?change_pass" class="dropdown__link">Change Password</a>
+                        <a href="./my_account.php?change_pass" class="dropdown__link">Change Password</a>
                       </li>
                       <li class="dropdown__item">
-                        <a href="my_account.php?delete_account" class="dropdown__link">Delete Account</a>
+                        <a href="./my_account.php?delete_account" class="dropdown__link">Delete Account</a>
                       </li>
                     </ul>
                   </div>

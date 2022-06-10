@@ -9,9 +9,10 @@
 
 <link rel="shortcut icon" href="./images/LOGO.png">
   <title>BUSINESS CONNECT</title>
+    <link href="styles/backend.css" rel="stylesheet">
     <link rel="stylesheet" href="./customer/styles/customer_login_checkout.css">
   <link href="styles/bootstrap.min.css" rel="stylesheet">
-  <link href="styles/backend.css" rel="stylesheet">
+
   <link href="styles/style.css" rel="stylesheet">
 
 
