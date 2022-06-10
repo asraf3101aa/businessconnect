@@ -232,6 +232,10 @@ if (!isset($_SESSION['admin_email'])) {
 
                         include("user_delete.php");
                     }
+                    if (isset($_GET['view_enquiry_msg'])) {
+
+                        include("view_enquiry_msg.php");
+                    }
 
 
 

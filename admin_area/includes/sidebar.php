@@ -324,6 +324,11 @@ if (!isset($_SESSION['admin_email'])) {
                             <a href="index.php?view_enquiry"> View Enquiry Types </a>
 
                         </li>
+                        <li>
+
+                            <a href="index.php?view_enquiry_msg"> View Enquiry </a>
+
+                        </li>
 
                     </ul>
 
