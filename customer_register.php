@@ -19,7 +19,7 @@ include("includes/main.php");
     <!-- HERO -->
     <div class="nero">
       <div class="nero__heading">
-        <span class="nero__bold">Connect</span> wiuth us
+        <span class="nero__bold">Connect</span> with us
       </div>
       <p class="nero__text">
       </p>
