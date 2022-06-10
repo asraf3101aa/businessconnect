@@ -6,7 +6,7 @@
 
 <h1>Login</h1>
 
-<p class="lead" >Already have an accoubn</p>
+<p class="lead" >Already have an Account?</p>
 
 
 </center>

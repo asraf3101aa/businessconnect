@@ -38,7 +38,7 @@ if(!isset($_SESSION['customer_email'])){
 } 
   else
   { 
-      echo '<a href="my_account.php?my_orders" class="login__link">My Account</a>';
+      echo '<a href="customer/my_account.php?my_orders" class="login__link">My Account</a>';
   }   
 ?>  
 </li>
@@ -65,7 +65,7 @@ if(!isset($_SESSION['customer_email'])){
       <div class="container clearfix">
 
         <div class="logo">
-          <a class="logo__link" href="index.php">
+          <a class="logo__link" href="./index.php">
             <img class="logo__img" src="images/logo.png" alt="businessconnect logotype" width="237" height="19">
           </a>
         </div>
