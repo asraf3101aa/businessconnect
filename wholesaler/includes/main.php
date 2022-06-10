@@ -47,7 +47,7 @@ if(!isset($_SESSION['customer_email'])){
 <li class="login__item">
 <?php
 if(!isset($_SESSION['customer_email'])){
-  echo '<a href="checkout.php" class="login__link">Sign In</a>';
+  echo '<a href="../checkout.php" class="login__link">Sign In</a>';
 } 
   else
   { 
