@@ -99,7 +99,7 @@ include("includes/main.php");
 
 <label>Confirm Password </label>
 
-<input type="password" class="form-control confirm" id="con_pass" required>
+<input type="password" class="form-control confirm" id="con_pass" name="c_cnfrm_password" required>
 
 </div><!-- form-group Ends -->
 
