@@ -132,7 +132,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         <td>
 
-                                            <a href="index.php?customer_delete=<?php echo $c_id; ?>">
+                                            <a href="index.php?wholesaler_delete=<?php echo $c_id; ?>">
 
                                                 <i class="fa fa-trash-o"></i> Delete
 

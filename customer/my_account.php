@@ -10,9 +10,9 @@ echo "<script>window.open('../checkout.php','_self')</script>";
 }else {
 
 include("includes/db.php");
-include("./includes/header.php");
+include("includes/header.php");
 include("functions/functions.php");
-include("./includes/main.php");
+include("includes/main.php");
 
 
 ?>

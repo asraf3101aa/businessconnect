@@ -35,7 +35,7 @@ include("includes/main.php");
                 <h3> <a href="../checkout.php">Are you a retailer? Login here</a></h3>
             </div>
             <div class="text" id="spaceing">
-                <h3> <a href="../checkout.php">Don't have an account? Register here</a></h3>
+                <h3> <a href="../customer_register.php">Don't have an account? Register here</a></h3>
             </div>
         </form>
     </div>

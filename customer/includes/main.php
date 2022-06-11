@@ -28,7 +28,7 @@
 if(isset($_SESSION['customer_email']) || !isset($_SESSION['customer_email']) && $_SESSION['role'] != "ROLE_WHOLESALER"){
   ?>
         <div class="basket">
-          <a href="cart.php" class="btn btn--basket">
+          <a href="../cart.php" class="btn btn--basket">
             <i class="icon-basket"></i>
             <?php items(); ?> items
           </a>
@@ -87,7 +87,7 @@ if(!isset($_SESSION['customer_email']) && !isset($_SESSION['wholesaler_email']))
 
 
             <li class="categories__item">
-              <a class="categories__link categories__link--active" href="shop.php">
+              <a class="categories__link" href="shop.php">
                 Shop
               </a>
             </li>

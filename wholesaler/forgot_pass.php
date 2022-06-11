@@ -10,80 +10,70 @@ include("includes/main.php");
 ?>
 
 <main>
-  <!-- HERO -->
-  <div class="nero">
-    <div class="nero__heading">
-      <span class="nero__bold">Forgot</span> password
+    <!-- HERO -->
+    <div class="nero">
+      <div class="nero__heading">
+        <span class="nero__bold">Forgot</span> password
+      </div>
+      <p class="nero__text">
+      </p>
     </div>
-    <p class="nero__text">
-    </p>
-  </div>
-</main>
+  </main>
 
-<div id="content">
-  <!-- content Starts -->
-  <div class="container">
-    <!-- container Starts -->
+<div id="content" ><!-- content Starts -->
+<div class="container" ><!-- container Starts -->
 
-    <div class="col-md-12">
-      <!--- col-md-12 Starts -->
+<div class="col-md-12" ><!--- col-md-12 Starts -->
 
-      <ul class="breadcrumb">
-        <!-- breadcrumb Starts -->
+<ul class="breadcrumb" ><!-- breadcrumb Starts -->
 
-        <li>
-          <a href="index.php">Home</a>
-        </li>
+<li>
+<a href="index.php">Home</a>
+</li>
 
-        <li>Register</li>
+<li>Forgot password</li>
 
-      </ul><!-- breadcrumb Ends -->
+</ul><!-- breadcrumb Ends -->
 
 
 
-    </div>
-    <!--- col-md-12 Ends -->
+</div><!--- col-md-12 Ends -->
 
 
-    <div class="col-md-12">
-      <!-- col-md-12 Starts -->
+<div class="col-md-12" ><!-- col-md-12 Starts -->
 
-      <div class="box">
-        <!-- box Starts -->
+<div class="box"><!-- box Starts -->
 
-        <div class="box-header">
-          <!-- box-header Starts -->
+<div class="box-header"><!-- box-header Starts -->
 
-          <center>
+<center>
 
-            <h3> Enter Your Email Below , We Will Send You , Your Password </h3>
+<h3> Enter Your Email Below</h3>
 
-          </center>
+</center>
 
-        </div><!-- box-header Ends -->
+</div><!-- box-header Ends -->
 
-        <div align="center">
-          <!-- center div Starts -->
+<div align="center"><!-- center div Starts -->
 
-          <form action="" method="post">
-            <!-- form Starts -->
+<form action="" method="post"><!-- form Starts -->
 
-            <input type="text" class="form-control" name="c_email" placeholder="Enter Your Email" required>
+<input type="text" class="form-control" name="c_email" placeholder="Enter Your Email">
 
-            <br>
+<br>
 
-            <input type="submit" name="forgot_pass" class="btn btn-primary" value="Send My Password">
+<input type="submit" name="forgot_pass" class="btn btn-primary" value="Reset">
 
-          </form><!-- form Ends -->
+</form><!-- form Ends -->
 
-        </div><!-- center div Ends -->
+</div><!-- center div Ends -->
 
-      </div><!-- box Ends -->
+</div><!-- box Ends -->
 
-    </div><!-- col-md-12 Ends -->
+</div><!-- col-md-12 Ends -->
 
 
-  </div><!-- container Ends -->
+</div><!-- container Ends -->
 </div><!-- content Ends -->
 
 
