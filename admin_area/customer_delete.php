@@ -21,7 +21,7 @@ if(isset($_GET['customer_delete'])){
 
 $delete_id = $_GET['customer_delete'];
 
-$delete_customer = "delete from customers where customer_id='$delete_id'";
+$delete_customer = "DELETE FROM customers WHERE customer_id='$delete_id'";
 
 $run_delete = mysqli_query($con,$delete_customer);
 
