@@ -380,6 +380,15 @@ if (!isset($_SESSION['wholesaler_email']) && $_SESSION['role'] != "wholesaler") 
 
                   <input type="text" name="product_label" class="form-control" required>
 
+                  <br>
+
+                  <p style="font-size:10px; font-weight:bold;">
+
+                    Enter Sale or Gift to enable discount
+
+                  </p>
+
+
                 </div>
 
               </div><!-- form-group Ends -->

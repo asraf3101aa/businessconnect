@@ -101,7 +101,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <p style="font-size:15px; font-weight:bold;">
 
-                                    Product Url Example : navy-blue-t-shirt
+                                    Product Url Example : coles-milk
 
                                 </p>
 
@@ -380,6 +380,14 @@ if (!isset($_SESSION['admin_email'])) {
                             <div class="col-md-6">
 
                                 <input type="text" name="product_label" class="form-control" required>
+
+                                <br>
+
+                  <p style="font-size:10px; font-weight:bold;">
+
+                    Enter Sale or Gift to enable discount
+
+                  </p>
 
                             </div>
 

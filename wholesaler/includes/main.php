@@ -10,12 +10,12 @@
         <div class="currency">
           <a class="currency__change" href="customer/my_account.php?my_orders">
           <?php
-          if(!isset($_SESSION['customer_email'])){
+          if(!isset($_SESSION['wholesaler_email'])){
           echo "Welcome :Guest"; 
           }
           else
           { 
-              echo "Welcome : " . $_SESSION['customer_email'] . "";
+              echo "Welcome : " . $_SESSION['wholesaler_email'] . "";
           }
 ?>
           </a>
@@ -33,7 +33,7 @@
 
 <li class="login__item">
 <?php
-if(!isset($_SESSION['customer_email'])){
+if(!isset($_SESSION['wholesaler_email'])){
   echo '<a href="../customer_register.php" class="login__link">Register</a>';
 } 
   else
@@ -46,8 +46,8 @@ if(!isset($_SESSION['customer_email'])){
 
 <li class="login__item">
 <?php
-if(!isset($_SESSION['customer_email'])){
-  echo '<a href="../checkout.php" class="login__link">Sign In</a>';
+if(!isset($_SESSION['wholesaler_email'])){
+  echo '<a href="wholesaler_login.php" class="login__link">Sign In</a>';
 } 
   else
   { 

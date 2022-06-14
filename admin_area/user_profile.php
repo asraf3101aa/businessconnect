@@ -252,7 +252,9 @@ if (!isset($_SESSION['admin_email'])) {
 
         $admin_email = $_POST['admin_email'];
 
-        $admin_pass = $_POST['admin_pass'];
+        $pass_hold = $_POST['admin_pass'];
+
+        $admin_pass = password_hash($pass_hold, PASSWORD_DEFAULT);
 
         $admin_country = $_POST['admin_country'];
 
