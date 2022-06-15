@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Customers
+                    <i class="fa fa-dashboard"></i> Dashboard / View Wholesaler
 
                 </li>
 
@@ -44,7 +44,7 @@ if (!isset($_SESSION['admin_email'])) {
                     <h3 class="panel-title">
                         <!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"></i> View Customers
+                        <i class="fa fa-money fa-fw"></i> View Wholesaler
 
                     </h3><!-- panel-title Ends -->
 
