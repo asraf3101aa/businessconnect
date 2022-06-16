@@ -126,7 +126,7 @@
             </div>
 
             <div class="designby">
-                Design by AMNY
+                Design by Federation university students
             </div>
 
         </div>
