@@ -65,7 +65,7 @@ include("../includes/main.php");
 
 <center><!-- center Starts -->
 
-<a href="customer_register.php" >
+<a href="../customer_register.php" >
 
 <h3>Don't have an account? Register Here</h3>
 
