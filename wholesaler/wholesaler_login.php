@@ -25,7 +25,7 @@ include("../includes/main.php");
 
 </div><!-- box-header Ends -->
 
-<form action="checkout.php" method="post" ><!--form Starts -->
+<form action="" method="post" ><!--form Starts -->
 
 <div class="form-group" ><!-- form-group Starts -->
 
