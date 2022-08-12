@@ -99,11 +99,7 @@ if (!isset($_SESSION['wholesaler_email']) && $_SESSION['role'] != "wholesaler") 
 
                   <br>
 
-                  <p style="font-size:15px; font-weight:bold;">
-
-                    Product Url Example : coles-milk
-
-                  </p>
+                
 
                 </div>
 

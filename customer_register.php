@@ -16,123 +16,137 @@ include("includes/main.php");
 
 <!-- MAIN -->
 <main>
-    <!-- HERO -->
-    <div class="nero">
-      <div class="nero__heading">
-        <span class="nero__bold">Connect</span> with us
-      </div>
-      <p class="nero__text">
-      </p>
+  <!-- HERO -->
+  <div class="nero">
+    <div class="nero__heading">
+      <span class="nero__bold">Connect</span> with us
     </div>
-  </main>
+    <p class="nero__text">
+    </p>
+  </div>
+</main>
 
 
-<div id="content" ><!-- content Starts -->
-<div class="container" ><!-- container Starts -->
-
-
-
-
-
-<div class="col-md-12" ><!-- col-md-12 Starts -->
-
-<div class="box" ><!-- box Starts -->
-
-<div class="box-header" ><!-- box-header Starts -->
-
-<center><!-- center Starts -->
-
-<h2> Register A New Account </h2>
-
-
-
-</center><!-- center Ends -->
-
-</div><!-- box-header Ends -->
-
-<form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
-
-<div class="form-group" ><!-- form-group Starts -->
-
-<label>Your Name</label>
-
-<input type="text" class="form-control" name="c_name" required>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Your Email</label>
-
-<input type="text" class="form-control" name="c_email" required>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Your Phone</label>
-
-<input type="text" class="form-control" name="c_contact" required>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Register as</label>
-
-<select class="form-control" name="role" required>
-  <option value="ROLE_RETAILER">Retailer</option>
-  <option value="ROLE_WHOLESALER">Wholesaler</option>
-</select>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Your Password </label>
-
-<input type="password" class="form-control" id="pass" name="c_pass" required>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Confirm Password </label>
-
-<input type="password" class="form-control confirm" id="con_pass" name="c_cnfrm_password" required>
-
-</div><!-- form-group Ends -->
+<div id="content">
+  <!-- content Starts -->
+  <div class="container">
+    <!-- container Starts -->
 
 
 
 
 
+    <div class="col-md-12">
+      <!-- col-md-12 Starts -->
 
-<div class="text-center"><!-- text-center Starts -->
+      <div class="box">
+        <!-- box Starts -->
 
-<button type="submit" name="register" class="btn btn-primary">
+        <div class="box-header">
+          <!-- box-header Starts -->
 
-<i class="fa fa-user-md"></i> Register
+          <center>
+            <!-- center Starts -->
 
-</button>
-
-<a href="checkout.php" >
-
-<h4>Already have an account? Login here</h4>
-
-</a>
-
-</div><!-- text-center Ends -->
-
-</form><!-- form Ends -->
-
-</div><!-- box Ends -->
-
-</div><!-- col-md-12 Ends -->
+            <h2> Register A New Account </h2>
 
 
 
-</div><!-- container Ends -->
+          </center><!-- center Ends -->
+
+        </div><!-- box-header Ends -->
+
+        <form action="customer_register.php" method="post" enctype="multipart/form-data">
+          <!-- form Starts -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Your Name</label>
+
+            <input type="text" class="form-control" name="c_name" required>
+
+          </div><!-- form-group Ends -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Your Email</label>
+
+            <input type="text" class="form-control" name="c_email" required>
+
+          </div><!-- form-group Ends -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Your Phone</label>
+
+            <input type="text" class="form-control" name="c_contact" required>
+
+          </div><!-- form-group Ends -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Register as</label>
+
+            <select class="form-control" name="role" required>
+              <option value="ROLE_RETAILER">Retailer</option>
+              <option value="ROLE_WHOLESALER">Wholesaler</option>
+            </select>
+
+          </div><!-- form-group Ends -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Your Password </label>
+
+            <input type="password" class="form-control" id="pass" name="c_pass" required>
+
+          </div><!-- form-group Ends -->
+
+          <div class="form-group">
+            <!-- form-group Starts -->
+
+            <label>Confirm Password </label>
+
+            <input type="password" class="form-control confirm" id="con_pass" name="c_cnfrm_password" required>
+
+          </div><!-- form-group Ends -->
+
+
+
+
+
+
+          <div class="text-center">
+            <!-- text-center Starts -->
+
+            <button type="submit" name="register" class="btn btn-primary">
+
+              <i class="fa fa-user-md"></i> Register
+
+            </button>
+
+            <a href="checkout.php">
+
+              <h4>Already have an account? Login here</h4>
+
+            </a>
+
+          </div><!-- text-center Ends -->
+
+        </form><!-- form Ends -->
+
+      </div><!-- box Ends -->
+
+    </div><!-- col-md-12 Ends -->
+
+
+
+  </div><!-- container Ends -->
 </div><!-- content Ends -->
 
 </body>
@@ -145,13 +159,13 @@ $name_regex = $phone_regex = $password_regex = "";
 $password = "";
 $c_email = $c_contact = $c_name = $c_pass = "";
 $name_regex = "/^[a-zA-Z]{3,20}(?: [a-zA-Z]+){0,2}$/";
-$phone_regex = "/^(?=.*)((?:\+61) ?(?:\((?=.*\)))?([2-47-8])\)?|(?:\((?=.*\)))?([0-1][2-47-8])\)?) ?-?(?=.*)((\d{1} ?-?\d{3}$)|(00 ?-?\d{4} ?-?\d{4}$)|( ?-?\d{4} ?-?\d{4}$)|(\d{2} ?-?\d{3} ?-?\d{3}$))/";
+$phone_regex = "/(\+977)?[9][6-9]\d{8}/";
 $password_regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/";
 
 if (isset($_POST['register'])) {
 
   //validity check
-  
+
 
   //check for email
   if (empty(trim($_POST["c_email"]))) {
@@ -302,7 +316,7 @@ if (isset($_POST['register'])) {
       } else {
 
         $_SESSION['customer_email'] = $c_email;
-        $_SESSION['role']= $role;
+        $_SESSION['role'] = $role;
 
         echo "<script>window.open('index.php','_self')</script>";
       }
@@ -374,7 +388,7 @@ if (isset($_POST['register'])) {
         <script>
           alert("<?php echo " Check your mail for account confirmation " ?>");
         </script>
-      <?php
+<?php
       }
       $insert_customer = "insert into wholesaler (wholesaler_name,wholesaler_email,wholesaler_pass,wholesaler_contact,wholesaler_ip,wholesaler_confirm_code) values ('$c_name','$c_email','$c_pass','$c_contact','$c_ip','$wholesaler_confirm_code')";
 
@@ -384,7 +398,7 @@ if (isset($_POST['register'])) {
 
 
       $_SESSION['wholesaler_email'] = $c_email;
-      $_SESSION['role']= $role;
+      $_SESSION['role'] = $role;
 
       echo "<script>window.open('wholesaler/my_account.php?my_orders','_self')</script>";
     }

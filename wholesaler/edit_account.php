@@ -34,7 +34,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Name: </label>
+        <label> Name: </label>
 
         <input type="text" name="c_name" class="form-control" required value="<?php echo $customer_name; ?>">
 
@@ -44,7 +44,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Email: </label>
+        <label> Email: </label>
 
         <input type="text" name="c_email" class="form-control" required value="<?php echo $wholesaler_email; ?>">
 
@@ -54,7 +54,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Country: </label>
+        <label> Country: </label>
 
         <input type="text" name="c_country" class="form-control" required value="<?php echo $customer_country; ?>">
 
@@ -64,7 +64,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer City: </label>
+        <label> City: </label>
 
         <input type="text" name="c_city" class="form-control" required value="<?php echo $customer_city; ?>">
 
@@ -74,7 +74,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Contact: </label>
+        <label> Contact: </label>
 
         <input type="text" name="c_contact" class="form-control" required value="<?php echo $customer_contact; ?>">
 
@@ -84,7 +84,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Address: </label>
+        <label> Address: </label>
 
         <input type="text" name="c_address" class="form-control" required value="<?php echo $customer_address; ?>">
 
@@ -94,7 +94,7 @@ $customer_image = $row_customer['wholesaler_image'];
     <div class="form-group">
         <!-- form-group Starts -->
 
-        <label> Customer Image: </label>
+        <label> Image: </label>
 
         <input type="file" name="c_image" class="form-control"><br>
 

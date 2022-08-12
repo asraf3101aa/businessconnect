@@ -69,7 +69,6 @@ $product_label = "
 
 <a class='label sale' href='#' style='color:black;'>
 
-<div class='thelabel'>$pro_label</div>
 
 <div class='label-background'> </div>
 
@@ -679,7 +678,6 @@ $product_label = "
 
 <a class='label sale' href='#' style='color:black;'>
 
-<div class='thelabel'>$pro_label</div>
 
 <div class='label-background'> </div>
 

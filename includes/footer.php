@@ -34,10 +34,8 @@
                         <a href="#" class="footer-nav__link">Secure shipping</a>
                     </li>
                     <li class="footer-nav__item">
-                        <a href="#" class="footer-nav__link">Testimonials</a>
                     </li>
                     <li class="footer-nav__item">
-                        <a href="#" class="footer-nav__link">Award winning</a>
                     </li>
                     <li class="footer-nav__item">
                         <a href="#" class="footer-nav__link">Ethical trading</a>
@@ -58,7 +56,6 @@
                         <a href="#" class="footer-nav__link">View cart</a>
                     </li>
                     <li class="footer-nav__item">
-                        <a href="#" class="footer-nav__link">View your lookbook</a>
                     </li>
                     <li class="footer-nav__item">
                         <a href="#" class="footer-nav__link">Track an order</a>
@@ -73,12 +70,12 @@
             <div class="footer-nav__col footer-nav__col--contacts">
                 <div class="footer-nav__heading">Contact details</div>
                 <address class="address">
-                    Head Office: Melbourne CBD.<br>
-                    Melbourne, Victoria, CBD 3000.
+                    Head Office: Hetauda.<br>
+                    Hetauda, Makawanpur, 44107.
                 </address>
                 <div class="phone">
                     Telephone:
-                    <a class="phone__number" href="tel:0123456789">0123-456-789</a>
+                    <a class="phone__number" href="tel:0123456789">+977 986-5049086</a>
                 </div>
                 <div class="email">
                     Email:
@@ -89,30 +86,7 @@
         </div>
     </div>
 
-    <div class="banners">
-        <div class="container clearfix">
-
-            <div class="banner-award">
-                <span>E-Commerce</span><br> New Platform
-            </div>
-
-            <div class="banner-social">
-                <a href="#" class="banner-social__link">
-                    <i class="icon-facebook"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-twitter"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-instagram"></i>
-                </a>
-                <a href="#" class="banner-social__link">
-                    <i class="icon-pinterest-circled"></i>
-                </a>
-            </div>
-
-        </div>
-    </div>
+    
 
     <div class="page-footer__subline">
         <div class="container clearfix">
@@ -126,7 +100,7 @@
             </div>
 
             <div class="designby">
-                Design by Federation university students
+                Design by Asraf Ansari
             </div>
 
         </div>

@@ -2,17 +2,15 @@
 
 session_start();
 
-if(!isset($_SESSION['customer_email'])){
+if (!isset($_SESSION['customer_email'])) {
 
-echo "<script>window.open('../checkout.php','_self')</script>";
+  echo "<script>window.open('../checkout.php','_self')</script>";
+} else {
 
-
-}else {
-
-include("includes/db.php");
-include("includes/header.php");
-include("functions/functions.php");
-include("includes/main.php");
+  include("includes/db.php");
+  include("includes/header.php");
+  include("functions/functions.php");
+  include("includes/main.php");
 
 
 ?>
@@ -27,93 +25,99 @@ include("includes/main.php");
     </div>
   </main>
 
-<div id="content" ><!-- content Starts -->
-<div class="container" ><!-- container Starts -->
+  <div id="content">
+    <!-- content Starts -->
+    <div class="container">
+      <!-- container Starts -->
 
 
 
-<div class="col-md-12"><!-- col-md-12 Starts -->
+      <div class="col-md-12">
+        <!-- col-md-12 Starts -->
 
-<?php
+        <?php
 
-$c_email = $_SESSION['customer_email'];
+        $c_email = $_SESSION['customer_email'];
 
-$get_customer = "select * from customers where customer_email='$c_email'";
+        $get_customer = "select * from customers where customer_email='$c_email'";
 
-$run_customer = mysqli_query($con,$get_customer);
+        $run_customer = mysqli_query($con, $get_customer);
 
-$row_customer = mysqli_fetch_array($run_customer);
+        $row_customer = mysqli_fetch_array($run_customer);
 
-$customer_confirm_code = $row_customer['customer_confirm_code'];
+        $customer_confirm_code = $row_customer['customer_confirm_code'];
 
-$c_name = $row_customer['customer_name'];
+        $c_name = $row_customer['customer_name'];
 
-if(!empty($customer_confirm_code)){
+        if (!empty($customer_confirm_code)) {
 
-?>
+        ?>
 
-<div class="alert alert-danger"><!-- alert alert-danger Starts -->
+          <div class="alert alert-danger">
+            <!-- alert alert-danger Starts -->
 
-<strong> Warning! </strong> Please Confirm Your Email and if you have not received your confirmation email
+            <strong> Warning! </strong> Please Confirm Your Email and if you have not received your confirmation email
 
-<a href="my_account.php?send_email" class="alert-link">
+            <a href="my_account.php?send_email" class="alert-link">
 
-Send Email Again
+              Send Email Again
 
-</a>
+            </a>
 
-</div><!-- alert alert-danger Ends -->
+          </div><!-- alert alert-danger Ends -->
 
-<?php } ?>
+        <?php } ?>
 
-</div><!-- col-md-12 Ends -->
+      </div><!-- col-md-12 Ends -->
 
-<div class="col-md-3"><!-- col-md-3 Starts -->
+      <div class="col-md-3">
+        <!-- col-md-3 Starts -->
 
-<?php include("includes/sidebar.php"); ?>
+        <?php include("includes/sidebar.php"); ?>
 
-</div><!-- col-md-3 Ends -->
+      </div><!-- col-md-3 Ends -->
 
-<div class="col-md-9" ><!--- col-md-9 Starts -->
+      <div class="col-md-9">
+        <!--- col-md-9 Starts -->
 
-<div class="box" ><!-- box Starts -->
+        <div class="box">
+          <!-- box Starts -->
 
-<?php
+          <?php
 
-if(isset($_GET[$customer_confirm_code])){
+          if (isset($_GET[$customer_confirm_code])) {
 
-$update_customer = "update customers set customer_confirm_code='' where customer_confirm_code='$customer_confirm_code'";
+            $update_customer = "update customers set customer_confirm_code='' where customer_confirm_code='$customer_confirm_code'";
 
-$run_confirm = mysqli_query($con,$update_customer);
+            $run_confirm = mysqli_query($con, $update_customer);
 
-echo "<script>alert('Your Email Has Been Confirmed')</script>";
+            echo "<script>alert('Your Email Has Been Confirmed')</script>";
 
-echo "<script>window.open('my_account.php?my_orders','_self')</script>";
+            echo "<script>window.open('my_account.php?my_orders','_self')</script>";
+          }
 
-}
+          if (isset($_GET['send_email'])) {
 
-if(isset($_GET['send_email'])){
+            require "../Mail/phpmailer/PHPMailerAutoload.php";
+            $mail = new PHPMailer;
 
-  require "../Mail/phpmailer/PHPMailerAutoload.php";
-  $mail = new PHPMailer;
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'tls';
 
-  $mail->isSMTP();
-  $mail->Host='smtp.gmail.com';
-  $mail->Port=587;
-  $mail->SMTPAuth=true;
-  $mail->SMTPSecure='tls';
+            $mail->Username = 'suipservices@gmail.com';
+            $mail->Password = 'qxxsxcxtrnjggwvg';
 
-  $mail->Username='suipservices@gmail.com';
-  $mail->Password='qxxsxcxtrnjggwvg';
+            $mail->setFrom('suipservices@gmail.com', 'Verify Email');
+            // get email from input
+            $mail->addAddress($c_email);
 
-  $mail->setFrom('suipservices@gmail.com', 'Verify Email');
-  // get email from input
-  $mail->addAddress($c_email);
-
-  // HTML body
-  $mail->isHTML(true);
-  $mail->Subject="Email Confirmation Message";
-  $mail->Body="
+            // HTML body
+            $mail->isHTML(true);
+            $mail->Subject = "Email Confirmation Message";
+            $mail->Body = "
 
   <h2>
   Email Confirmation By businessconnect.com $c_name
@@ -127,90 +131,84 @@ if(isset($_GET['send_email'])){
   
   ";
 
-  if(!$mail->send()){
-      ?>
-          <script>
-              alert("<?php echo " Invalid Email "?>");
-          </script>
-      <?php
-  }else{
-      ?>
-          <script>
-              alert("<?php echo " Check your mail for account confirmation "?>");
-          </script>
-      <?php
-  }
+            if (!$mail->send()) {
+          ?>
+              <script>
+                alert("<?php echo " Error occured " ?>");
+              </script>
+            <?php
+            } else {
+            ?>
+              <script>
+                alert("<?php echo " Check your mail for account confirmation " ?>");
+              </script>
+          <?php
+            }
 
-echo "<script>window.open('my_account.php?my_orders','_self')</script>";
-
-}
-
-
-
-if(isset($_GET['my_orders'])){
-
-  include("my_orders.php");
-  
-  }
-  
-  if(isset($_GET['pay_offline'])) {
-  
-  include("pay_offline.php");
-  
-  }
-  
-  if(isset($_GET['edit_account'])) {
-  
-  include("edit_account.php");
-  
-  }
-  
-  if(isset($_GET['change_pass'])){
-  
-  include("change_pass.php");
-  
-  }
-  
-  if(isset($_GET['delete_account'])){
-  
-  include("delete_account.php");
-  
-  }
-  
-  if(isset($_GET['my_wishlist'])){
-  
-  include("my_wishlist.php");
-  
-  }
-  
-  if(isset($_GET['delete_wishlist'])){
-  
-  include("delete_wishlist.php");
-  
-  }
-
-?>
-
-</div><!-- box Ends -->
-
-
-</div><!--- col-md-9 Ends -->
-
-</div><!-- container Ends -->
-</div><!-- content Ends -->
+            echo "<script>window.open('my_account.php?my_orders','_self')</script>";
+          }
 
 
 
-<?php
+          if (isset($_GET['my_orders'])) {
 
-include("../includes/footer.php");
+            include("my_orders.php");
+          }
 
-?>
+          if (isset($_GET['pay_offline'])) {
 
-<script src="js/jquery.min.js"> </script>
+            include("pay_offline.php");
+          }
 
-<script src="js/bootstrap.min.js"></script>
+          if (isset($_GET['edit_account'])) {
 
-</body>
-</html>
+            include("edit_account.php");
+          }
+
+          if (isset($_GET['change_pass'])) {
+
+            include("change_pass.php");
+          }
+
+          if (isset($_GET['delete_account'])) {
+
+            include("delete_account.php");
+          }
+
+          if (isset($_GET['my_wishlist'])) {
+
+            include("my_wishlist.php");
+          }
+
+          if (isset($_GET['delete_wishlist'])) {
+
+            include("delete_wishlist.php");
+          }
+
+          ?>
+
+        </div><!-- box Ends -->
+
+
+      </div>
+      <!--- col-md-9 Ends -->
+
+    </div><!-- container Ends -->
+  </div><!-- content Ends -->
+
+
+
+  <?php
+
+  include("../includes/footer.php");
+
+  ?>
+
+  <script src="js/jquery.min.js"> </script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+  </html>
 <?php } ?>
