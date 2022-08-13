@@ -68,9 +68,8 @@ $order_id = $_GET['order_id'];
 
 <option>Select Payment Mode</option>
 <option>Bank Code</option>
-<option>UBL/Omni Paisa</option>
-<option>Easy paisa</option>
-<option>Western Union</option>
+<option>Khalti</option>
+<option>Esewa/option>
 
 </select><!-- select Ends -->
 
@@ -87,7 +86,7 @@ $order_id = $_GET['order_id'];
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label>Easy Paisa/Omni Code:</label>
+<label>Esewa/Khalti Id</label>
 
 <input type="text" class="form-control" name="code" required>
 
@@ -172,11 +171,7 @@ echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 
 
 
-<?php
 
-include("includes/footer.php");
-
-?>
 
 <script src="js/jquery.min.js"> </script>
 

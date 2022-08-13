@@ -113,14 +113,14 @@ function getPro()
 
     if ($pro_label == "Sale" or $pro_label == "Gift") {
 
-      $product_price = "<del> $$pro_price </del>";
+      $product_price = "<del>Rs.$pro_price </del>";
 
-      $product_psp_price = "| $$pro_psp_price";
+      $product_psp_price = "| Rs.$pro_psp_price";
     } else {
 
       $product_psp_price = "";
 
-      $product_price = "$$pro_price";
+      $product_price = "Rs.$pro_price";
     }
 
 
@@ -301,14 +301,14 @@ function getProducts()
 
     if ($pro_label == "Sale" or $pro_label == "Gift") {
 
-      $product_price = "<del> $$pro_price </del>";
+      $product_price = "<del> Rs.$pro_price </del>";
 
-      $product_psp_price = "| $$pro_psp_price";
+      $product_psp_price = "| Rs.$pro_psp_price";
     } else {
 
       $product_psp_price = "";
 
-      $product_price = "$$pro_price";
+      $product_price = "Rs.$pro_price";
     }
 
 

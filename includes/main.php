@@ -66,7 +66,7 @@
                         <a href="customer/my_account.php?change_pass" class="dropdown__link">Change Password</a>
                       </li>
                       <li class="dropdown__item">
-                        <a href="customer/my_account.php?delete_account" class="dropdown__link">Delete Account</a>
+                        <a href="logout.php" class="dropdown__link">Logout</a>
                       </li>
                     </ul>
                   </div>

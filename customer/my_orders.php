@@ -94,7 +94,7 @@ $order_status = "Paid";
 
 <th><?php echo $i; ?></th>
 
-<td>$<?php echo $due_amount; ?></td>
+<td>Rs.<?php echo $due_amount; ?></td>
 
 <td><?php echo $invoice_no; ?></td>
 
