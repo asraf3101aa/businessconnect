@@ -71,6 +71,7 @@ if (!isset($_SESSION['admin_email'])) {
                                     <th>Invoice No:</th>
                                     <th>Product Title:</th>
                                     <th>Product Qty:</th>
+                                    <th>Size:</th>
                                     <th>Order Date:</th>
                                     <th>Total Amount:</th>
                                     <th>Order Status:</th>
@@ -103,6 +104,8 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $product_id = $row_orders['product_id'];
 
+                                    $size = $row_orders['size'];
+
                                     $qty = $row_orders['qty'];
 
                                     $order_status = $row_orders['order_status'];
@@ -114,6 +117,9 @@ if (!isset($_SESSION['admin_email'])) {
                                     $row_products = mysqli_fetch_array($run_products);
 
                                     $product_title = $row_products['product_title'];
+
+                                    
+                                    
 
                                     $i++;
 
@@ -160,12 +166,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             $due_amount = $row_customer_order['due_amount'];
 
-                                            echo $order_date;
 
                                             ?>
                                         </td>
 
-                                        <td>$<?php echo $due_amount; ?></td>
+                                        <td>Rs.<?php echo $due_amount; ?></td>
 
                                         <td>
                                             <?php

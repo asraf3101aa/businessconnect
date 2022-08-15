@@ -56,7 +56,6 @@
             $row_wholesaler = mysqli_fetch_array($run_wholesaler);
 
             $wholesaler_id = $row_wholesaler['wholesaler_id'];
-            print_r($wholesaler_id);
 
 
             $get_orders = "select * from customer_orders where seller_id='$wholesaler_id'";

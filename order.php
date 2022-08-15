@@ -30,12 +30,14 @@ while($row_cart = mysqli_fetch_array($run_cart)){
 $pro_id = $row_cart['p_id'];
 
 $pro_qty = $row_cart['qty'];
-
+$pro_size= $row_cart['size'];
 
 $sub_total = $row_cart['p_price']*$pro_qty;
 
+$seller_id= $row_cart['seller_id'];
 
-$insert_customer_order = "insert into customer_orders (customer_id,due_amount,invoice_no,qty,order_date,order_status) values ('$customer_id','$sub_total','$invoice_no','$pro_qty',NOW(),'$status')";
+
+$insert_customer_order = "insert into customer_orders (customer_id,due_amount,invoice_no,qty,order_date,order_status,size,seller_id) values ('$customer_id','$sub_total','$invoice_no','$pro_qty',NOW(),'$status','$pro_size','$seller_id')";
 
 $run_customer_order = mysqli_query($con,$insert_customer_order);
 
